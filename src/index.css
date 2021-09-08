@@ -1,13 +1,111 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.App{
+    min-height: 100vh;
+    background-image: linear-gradient(rgb(242, 244, 255),rgb(251, 252, 255));
+}
+.btn-logout{
+  margin-top:120%;
+  color: black;
+  font-weight: bold;
+  width: 100%; 
+  background-color: rgb(242, 244, 255) !important;
+  opacity: 50%;   
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.btn-search {
+  padding: 5px 20px 6px 20px;
+  background-color: #566cd6 !important;   
+  color: white;    
+  height: 36px;
 }
+
+.mycustom input[type=text] {
+  width: 100%;
+  padding-right: 123px;
+}
+
+.mycustom .input-group-prepend {
+  position: absolute;
+  right: 1px;
+  top: 1px;
+  bottom: 4px;z-index:9;
+}
+
+.subtitles{
+  font-weight: bold;
+}
+
+.card{
+  box-shadow: 0 1px 3px rgb(189, 189, 209), 0 1px 2px rgba(189, 189, 209);
+  border-radius: 16px;
+}
+
+.input{
+  color: #40415E;
+  opacity: 50%;
+}
+
+::placeholder {
+  color: #40415E;
+}
+
+.text{
+color:white;
+opacity: 50%; 
+text-transform: none !important;
+padding: 2%;
+font-size: 12px;
+}
+ 
+.logo{
+width: 100%;
+height: 100%;
+padding: 10%;
+}
+
+.avatar{
+  width: 100%;
+  height: 100%;
+  padding: 5%;
+}
+
+.card-styled{
+box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); 
+}
+
+.sidebar { 
+  top: 0;
+  left: 0; 
+  background-color: #566cd6 !important;
+  color: #fff;
+  transition: all 0.3s;
+}
+  
+.sidebar .sidebar-header {
+  padding: 5px;  
+  background-color: #566cd6 !important;
+}
+
+.sidebar ul.components {
+  padding: 20px 0;
+}
+
+.sidebar ul p {
+  color: #fff;
+  padding: 10px;
+}
+
+.sidebar ul li a {
+  padding: 10px;
+  font-size: 1.1em;
+  display: block;
+}
+.sidebar ul li a:hover { 
+  background-color: #566cd6 !important; 
+}
+
+.sidebar ul li.active > a, a[aria-expanded="true"] {
+  color: #fff;
+  background-color: #566cd6 !important;
+}
+ 
