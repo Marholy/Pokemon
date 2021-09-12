@@ -29,7 +29,7 @@
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
   <!-- Custom styles for this template-->
-   <link href="css/sb-admin-2.min.css" rel="stylesheet">  
+ <!--   <link href="css/sb-admin-2.min.css" rel="stylesheet">   -->
   <link href="../src/index.css" rel="stylesheet">
 
     <title>Pokemon</title>
@@ -37,59 +37,70 @@
   <body>
     <body id="page-top">
       <div id="wrapper">      
-        <nav class="sidebar" id="accordionSidebar">
-          <div class="sidebar-header">
-            <a class="sidebar-brand d-flex align-items-center justify-content-center"
-            href="/">
-              <div class="sidebar-brand-icon">
-                <img src=".\.\image\logo.png" alt="" class="logo"/> 
-              </div>
-            </a>
-          </div>
-  
-          <ul class="list-unstyled components">
-            <li class="active">
-            <img src=".\.\image\avatar.png" alt="" class="avatar"/> 
-           
-              <h5 class="subtitles user">ASHK123</h5>
-            
-              <div class="text align-items-center">
-                <h6>Level 1</h6>
+        
+    <div class="container-fluid">
+      <div class="row wrapper min-vh-100 flex-column flex-sm-row">
+
+          <aside class="col-12 col-sm-3 p-0 bg-dark flex-shrink-1 aside">
+              <nav class="navbar navbar-expand-sm navbar-dark bg-dark align-items-start flex-sm-column flex-row">
+               
+              <div>
+                <div style="padding: 5% 0 0 3%; width: 15% !important;float: left !important;">
+                <a href class="navbar-toggler icons-header" data-toggle="collapse" data-target=".sidebar">
+                  <span class="navbar-toggler-icon">                        
+                  </span>
+               </a>
+              </div>  
+
+               <div style="padding: 0; width: 80% !important;float: left !important;">
+                <a class="navbar-brand icons-header" href="/">                     
+                  <img src=".\.\image\logo.png" alt="" class="logo"/>                       
+                </a>               
               </div> 
 
-              <div class="text align-items-center mt-3">
-                <h6>"Work hard on your test"</h6>
-              </div>  
-            
-           <div class="sidebar-heading">
-               <button class="btn btn-logout btn-block rounded">
-              <i class="far fa-arrow-alt-circle-left"></i>
-              LOG OUT
-            </button>
-            </li>  
-          </li> 
-          </ul>
-  
-      </nav>
-      <div id="content-wrapper" class="d-flex flex-column">
-      <div id="content">  
-          <nav class="navbar navbar-expand-lg navbar-light bg-light">
-              <div class="container-fluid">
-                  <button  id="sidebarToggleTop" type="button" id="sidebarCollapse" class="btn btn-link rounded-circle">
-                    <i class="fa fa-bars"></i>
-                  </button>
-              </div>
-          </nav>
+            </div>                 
 
-          <div id="root">
+                  <div class="collapse navbar-collapse sidebar">
+                    <ul class="flex-column navbar-nav w-100 justify-content-center"> 
 
-          </div> 
-        </div> 
+                      <li>
+                        <img src=".\.\image\avatar.png" alt="" class="avatar"/>                              
+                      </li>
+
+                      <li class="nav-item subtitles" style="margin: 10% 0 0 35%;">
+                          ASHK123
+                      </li>
+
+                      <li class="nav-item" style="margin: 0 0 0 40%;">
+                           Level 1
+                      </li>
+
+                      <li class="nav-item" style="margin: 20% 0 0 20%;">
+                            "Work hard on your test"
+                      </li>
+                      
+                      <li class="nav-item">
+                        <button class="btn btn-logout btn-block rounded">
+                          <i class="far fa-arrow-alt-circle-left"></i>
+                              LOG OUT
+                        </button>
+                      </li>
+
+                    </ul>
+
+                  </div>
+              </nav>
+          </aside>
+
+          <main class="col bg-faded py-3">
+            <div id="root">
+
+            </div>           
+          </main>
       </div>
-      </div>
-      </div> 
-   
-    <!-- Bootstrap core JavaScript-->
+  </div>
+
+   <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   

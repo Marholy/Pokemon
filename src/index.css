@@ -1,17 +1,19 @@
-.App{
+.wrapper{
     min-height: 100vh;
     background-image: linear-gradient(rgb(242, 244, 255),rgb(251, 252, 255));
 }
-.btn-logout{
-  margin-top:100%;
-  color: black;
+
+.btn-logout{ 
+  color:white;
   font-weight: bold;
-  width: 100%; 
-  background-color: rgb(242, 244, 255) !important;
-  opacity: 50%;   
+  margin: 2%;
+  width: 95%; 
+  background-color: #40415E !important; 
+  opacity: 50%;  
+  margin-top:35%;
 }
 
-.btn-search {
+.btns {
   padding: 5px 20px 6px 20px;
   background-color: #566cd6 !important;   
   color: white;    
@@ -21,7 +23,14 @@
 .mycustom input[type=text] {
   width: 100%;
   padding-right: 123px;
+  color: #40415E;
 }
+
+.mycustom input[type=text] ::placeholder {
+  color: #40415E;
+  opacity: 50%;
+}
+
 
 .mycustom .input-group-prepend {
   position: absolute;
@@ -32,6 +41,7 @@
 
 .subtitles{
   font-weight: bold;
+  font-size:larger;
 }
 
 .card{
@@ -40,12 +50,17 @@
 }
 
 .input{
-  color: #40415E;
-  opacity: 50%;
+  color: #40415E; 
 }
 
 ::placeholder {
   color: #40415E;
+}
+
+.user{
+  color:white;
+  font-weight: bold;
+  font-size: 20px;
 }
 
 .text{
@@ -56,16 +71,16 @@ padding: 2%;
 font-size: 12px;
 }
  
-.logo{
-width: 100%;
-height: 100%;
-padding: 10%;
+.logo{ 
+  width: 100%;
+  height: 100%;
+  padding: 2% 25% 2% 10%;
 }
 
 .avatar{
   width: 100%;
   height: 100%;
-  padding: 5%;
+  padding: 5% 20% 0 20%;
 }
 
 .card-styled{
@@ -73,39 +88,35 @@ box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); 
 }
 
-.sidebar { 
-  top: 0;
-  left: 0; 
-  background-color: #566cd6 !important;
-  color: #fff;
-  transition: all 0.3s;
-}
-  
-.sidebar .sidebar-header {
-  padding: 5px;  
-  background-color: #566cd6 !important;
+.card-link{
+text-decoration:none;
+color:black;
 }
 
-.sidebar ul.components {
-  padding: 20px 0;
+.card-link .active{
+text-decoration:none
 }
 
-.sidebar ul p {
-  color: #fff;
-  padding: 10px;
+.sprite{
+  width: 60%;
+  height: 60%; 
 }
 
-.sidebar ul li a {
-  padding: 10px;
-  font-size: 1.1em;
-  display: block;
-}
-.sidebar ul li a:hover { 
-  background-color: #566cd6 !important; 
-}
-
-.sidebar ul li.active > a, a[aria-expanded="true"] {
-  color: #fff;
-  background-color: #566cd6 !important;
+.tarjeta{
+  padding: 5% 3% 0 5%;
 }
  
+.shiny{
+  width:'auto';
+  float:'left';
+  padding-left:0;
+  margin-left:0;
+}
+ 
+ .navbar { 
+  background-color: #566cd6 !important;
+  color: #fff;
+} 
+.aside {
+  background-color: #566cd6 !important;
+}

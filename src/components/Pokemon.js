@@ -29,6 +29,8 @@ export default class Pokemon extends Component {
         name:'',
         pokedexNumber:'',
         imgUrlnormal:'',
+        imgUrlshinyFront1:'',
+        imgUrlshinyBack1:'',      
         imgUrlshinyFront:'',
         imgUrlshinyBack:'',        
         types:[],
@@ -46,7 +48,12 @@ export default class Pokemon extends Component {
         const response=await axios.get(pokemonUrl);
       
         const name=response.data.name;
-        const imgUrlnormal=response.data.sprites.front_default;
+        const imgUrlnormal=response.data['sprites']['other']['official-artwork']['front_default'];
+        
+        const imgUrlshinyFront1=response.data['sprites']['versions']['generation-v']['black-white']['front_default'];
+        const imgUrlshinyBack1=response.data['sprites']['versions']['generation-v']['black-white']['back_default'];
+ 
+
         const imgUrlshinyFront=response.data.sprites.front_shiny;
         const imgUrlshinyBack=response.data.sprites.back_shiny;
 
@@ -58,6 +65,8 @@ export default class Pokemon extends Component {
             name,
             pokedexNumber,
             imgUrlnormal,
+            imgUrlshinyFront1,
+            imgUrlshinyBack1,    
             imgUrlshinyFront,
             imgUrlshinyBack,        
             types,
@@ -71,36 +80,30 @@ export default class Pokemon extends Component {
         <div className="row align-items-center">
             <div className="row mb-3">     
                 <div className="col-12">       
-                <Link className="btn btn-primary rounded-pill" to="/">
+                <Link className="btn btns btn-primary rounded-pill" to="/">
                     <FontAwesomeIcon icon={faArrowLeft} />
                 </Link>
                 </div>
                 </div>
                     <div className="row">     
                     <div className="col-md-4 col-sm-8">            
-                    <div className="card card-styled align-items-center">
+                    <div className="card card-styled align-items-center tarjeta">
                         <img alt="" src={this.state.imgUrlnormal}
                         className="card-img-top rounded" 
                         />
-                            <div className="col-12">                          
-                            <div className="col-3 float-left">
-                            <img alt="" src={this.state.imgUrlshinyFront}
-                            className="card-img-top rounded" 
+                        <div>                          
+                            <img alt="" src={this.state.imgUrlshinyFront1}                                            
+                            />                    
+                            <img alt="" src={this.state.imgUrlshinyBack1}  
                             />
-                            </div>
-                            <div className="col-3 float-left">
-                            <img alt="" src={this.state.imgUrlshinyBack}
-                            className="card-img-top rounded" 
-                            />
-                            </div>
-                            </div>
-                            </div>
+                        </div>
+                    </div>
                     </div>
                     
                    
                     <div className="col-md-8 col-sm-12">
-                    <div className="card card-styled align-items-center">                   
-                    <h4> {this.state.name
+                    <div className="card card-styled tarjeta">                   
+                    <h4 style={{fontWeight:'bold'}}> {this.state.name
                            .toLowerCase()
                            .split(' ')
                            .map(
@@ -117,48 +120,42 @@ export default class Pokemon extends Component {
                         </span>
                     ))}
                 </div> 
-                        <div className="subtitles col-12 col-md-12">
-                            Pokedex Number                           
-                            <h6>{this.state.pokedexNumber}</h6>
-                            <hr/>
-                        </div>
-                       
-                        <div className="subtitles col-12 col-md-12">
-                            Height                            
-                            <h6>{this.state.height}</h6>
-                            <hr/>
-                        </div>
-                       
-                        <div className="subtitlescol-12 col-md-12">
-                            Weight                           
-                            <h6>{this.state.weight}</h6>
-                            <hr/>
-                        </div>
-                        
-                        <div className="subtitles col-12 col-md-12">
-                            Shiny
-                            <hr/>
-                            <div className="col-12">                          
-                            <div className="col-2 float-left">
-                            <img alt="" src={this.state.imgUrlshinyFront}
-                            className="card-img-top rounded mx-auto mt-2" 
-                            />
-                            </div>
-                            <div className="col-2 float-left">
-                            <img alt="" src={this.state.imgUrlshinyBack}
-                            className="card-img-top rounded mx-auto" 
-                            />
-                            </div>
-                            </div>
-
-                        </div>
-                    </div>
-                    
-                    </div>
+                <div className="subtitles col-12 col-md-12">
+                    Pokedex Number                           
+                    <h6>{this.state.pokedexNumber}</h6>
+                    <hr/>
                 </div>
-        </div>           
-        )
-    }
+                       
+                <div className="subtitles col-12 col-md-12">
+                    Height                            
+                    <h6>{this.state.height}</h6>
+                    <hr/>
+                </div>
+                       
+                <div className="subtitlescol-12 col-md-12">
+                    Weight                           
+                    <h6>{this.state.weight}</h6>
+                    <hr/>
+                </div>
+                        
+                <div className="subtitles col-12 col-md-12 ">
+                    Shiny           
+                    <div> 
+                        <img alt="" src={this.state.imgUrlshinyFront} 
+                        className="shiny"               
+                        />
+                    
+                        <img alt="" src={this.state.imgUrlshinyBack}    
+                         className="shiny"                        
+                        />
+                    </div>                                           
+            </div>
+           </div>                    
+       </div>
+    </div>
+ </div>           
+)
+}
 }
 
 
