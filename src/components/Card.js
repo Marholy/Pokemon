@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {HashRouter as Router, Link} from 'react-router-dom';
 import axios from 'axios';
-import '../index.css'
+import '../index.css';
 
 const TYPE_COLORS={
     bug: 'B1C12E',
@@ -10,7 +10,7 @@ const TYPE_COLORS={
     electric:'FBCC17',
     fairy:'F4B1F4',
     fighting:'823551D',
-    fire:'E73B0C',
+    fire:'ffb36b',
     ghost:'6060B2',
     grass:'74C236',
     ground:'D3B357',
@@ -20,7 +20,7 @@ const TYPE_COLORS={
     psychic:'ED4882',
     rock:'B9A156',
     steel:'B5B5C3',
-    water:'3295F6'
+    water:'94caff'
 };
 
 class Card extends Component { 
@@ -46,7 +46,8 @@ async componentDidMount(){
 
 render() {
     return (      
-    <div className="col-md-3 col-sm-6 mb-3">                 
+   
+    <div className="col-md-3 col-sm-6 mb-3">   
          <Router> 
             <Link to={`/pokemon/${this.state.id}`} className="card-link"> 
                 <div className="card card-styled align-items-center">
@@ -64,7 +65,7 @@ render() {
                     </h6>
                                   
                     <div className="sprite">
-                    <img className="card-img-top rounded mx-auto mt-0"
+                    <img className="card-img-top rounded mx-auto mt-0" alt=""
                     src={this.state.imgUrl}                  
                     />
                     </div>
@@ -75,10 +76,16 @@ render() {
                     {this.state.types &&  
                     <>
                     {this.state.types.map(type=>(
+
                     <span key={type}
-                    className="badge badge-primary badge-pill mr-1 pt-1 p-2"
+                    className="badge badge-primary rounded-pill mx-1 badge-pill pt-1 p-2"
                     style={{backgroundColor: `#${TYPE_COLORS[type]}`, color:'white'}}>
-                    {type}                            
+                    {type.toLowerCase()
+                        .split(' ')
+                        .map(
+                            l=> l.charAt(0).toUpperCase() + l.substring(1)
+                            )
+                        .join(' ')}                            
                     </span>
                     ))  
                     }
@@ -91,6 +98,7 @@ render() {
             </Link>         
        </Router> 
     </div>
+   
     );
   }
 }

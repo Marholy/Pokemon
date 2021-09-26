@@ -11,7 +11,7 @@ const TYPE_COLORS={
     electric:'FBCC17',
     fairy:'F4B1F4',
     fighting:'823551D',
-    fire:'E73B0C',
+    fire:'ffb36b',
     ghost:'6060B2',
     grass:'74C236',
     ground:'D3B357',
@@ -21,7 +21,7 @@ const TYPE_COLORS={
     psychic:'ED4882',
     rock:'B9A156',
     steel:'B5B5C3',
-    water:'3295F6'
+    water:'94caff'
 };
 
 export default class Pokemon extends Component {
@@ -76,18 +76,18 @@ export default class Pokemon extends Component {
     }
 
     render(){
-        return (            
-        <div className="row align-items-center">
-            <div className="row mb-3">     
-                <div className="col-12">       
+    return (            
+    <div className="row align-items-center">
+        <div className="row mb-3">     
+            <div className="col-12">       
                 <Link className="btn btns btn-primary rounded-pill" to="/">
                     <FontAwesomeIcon icon={faArrowLeft} />
                 </Link>
-                </div>
-                </div>
-                    <div className="row">     
-                    <div className="col-md-4 col-sm-8">            
-                    <div className="card card-styled align-items-center tarjeta">
+            </div>
+        </div>
+        <div className="row">     
+            <div className="col-md-4 col-sm-8">            
+                <div className="card card-styled align-items-center margen">
                         <img alt="" src={this.state.imgUrlnormal}
                         className="card-img-top rounded" 
                         />
@@ -98,12 +98,12 @@ export default class Pokemon extends Component {
                             />
                         </div>
                     </div>
-                    </div>
-                    
+            </div>   
                    
-                    <div className="col-md-8 col-sm-12">
-                    <div className="card card-styled tarjeta">                   
-                    <h4 style={{fontWeight:'bold'}}> {this.state.name
+            <div className="col-md-8 col-sm-12">
+                <div className="card card-styled">    
+                <div className="margen">               
+                <h4 style={{fontWeight:'bold', fontSize:'35px'}}> {this.state.name
                            .toLowerCase()
                            .split(' ')
                            .map(
@@ -111,15 +111,21 @@ export default class Pokemon extends Component {
                                )
                            .join(' ')}        
                     </h4>
-                    <div className="mb-3">
+                <div className="mb-4">
                     {this.state.types.map(type=>(
                         <span key={type}
-                        className="badge badge-primary badge-pill mr-1 pt-1 p-2"
+                        className="badge badge-primary rounded-pill mx-1 badge-pill pt-1 p-2"
                         style={{backgroundColor: `#${TYPE_COLORS[type]}`, color:'white'}}>
-                            {type}                            
+                        {type.toLowerCase()
+                        .split(' ')
+                        .map(
+                            l=> l.charAt(0).toUpperCase() + l.substring(1)
+                            )
+                        .join(' ')}                            
                         </span>
                     ))}
                 </div> 
+
                 <div className="subtitles col-12 col-md-12">
                     Pokedex Number                           
                     <h6>{this.state.pokedexNumber}</h6>
@@ -132,25 +138,24 @@ export default class Pokemon extends Component {
                     <hr/>
                 </div>
                        
-                <div className="subtitlescol-12 col-md-12">
+                <div className="subtitles col-12 col-md-12">
                     Weight                           
                     <h6>{this.state.weight}</h6>
                     <hr/>
                 </div>
                         
-                <div className="subtitles col-12 col-md-12 ">
-                    Shiny           
-                    <div> 
-                        <img alt="" src={this.state.imgUrlshinyFront} 
-                        className="shiny"               
-                        />
-                    
-                        <img alt="" src={this.state.imgUrlshinyBack}    
-                         className="shiny"                        
-                        />
-                    </div>                                           
+                <div className="subtitles col-12 col-md-12">
+                    Shiny                        
             </div>
-           </div>                    
+            </div>
+            <div className="d-flex justify-content-start shiny"> 
+                <img alt="" src={this.state.imgUrlshinyFront}                                                          
+                />
+                    
+                <img alt="" src={this.state.imgUrlshinyBack}                                                    
+                />
+            </div>     
+            </div>                         
        </div>
     </div>
  </div>           

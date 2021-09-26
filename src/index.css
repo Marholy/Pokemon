@@ -1,15 +1,18 @@
 .wrapper{
     min-height: 100vh;
     background-image: linear-gradient(rgb(242, 244, 255),rgb(251, 252, 255));
-}
+} 
 
 .btn-logout{ 
   color:white;
-  font-weight: bold;
-  margin: 2%;
-  width: 95%; 
-  background-color: #40415E !important; 
-  margin-top:35%;
+  font-weight: bold; 
+  background-color: rgb(255, 255, 255,0.20);   
+  align-self: end;
+  width: 100%; 
+}
+.divLogout{
+  margin-top: 40%;
+  padding: 5%;
 }
 
 .btns {
@@ -30,7 +33,6 @@
   opacity: 50%;
 }
 
-
 .mycustom .input-group-prepend {
   position: absolute;
   right: 1px;
@@ -40,7 +42,7 @@
 
 .subtitles{
   font-weight: bold;
-  font-size:larger;
+  font-size:medium;
 }
 
 .card{
@@ -83,8 +85,8 @@ font-size: 12px;
 }
 
 .card-styled{
-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); 
+  border-radius: 16px;
+  box-shadow:  rgba(0.15, 255, 255, 255);
 }
 
 .card-link{
@@ -101,21 +103,23 @@ text-decoration:none
   height: 60%; 
 }
 
-.tarjeta{
-  padding: 5% 3% 0 5%;
+.margen{
+  padding: 8% 6% 0 6%;
 }
- 
+
 .shiny{
-  width:'auto';
-  float:'left';
-  padding-left:0;
-  margin-left:0;
+  padding: 0 0 5% 1%;
 }
  
  .navbar { 
   background-color: #566cd6 !important;
   color: #fff;
 } 
+
+.navbar .btn{
+  align-items: flex-end;
+} 
+
 .aside {
   background-color: #566cd6 !important;
-}
+} 
