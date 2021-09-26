@@ -1,6 +1,19 @@
+# Front-End Pokedex Challenge 
+
+The first screen show a list of 20 pokemons with their name, pokedex number and types, the second one shows a the details of a specific pokemon, name, pokedex number, weight, height and types.
+
+# Demo
+https://marholy-pokemon.herokuapp.com/#/
+
+# Dependencies
+npm install react-router-dom
+npm i axios
+npm i bootstrap
+npm i font-awesome
+
 # Getting Started  
 
-In the project directory, you can run:
+Run project Ctrl+Ñ:
 
 ### `npm start`
 
